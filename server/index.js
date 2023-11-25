@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRouter = require("./routes/auth");
+const documentRouter = require("./routes/document");
 
 const PORT = process.env.PORT | 3001;
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(authRouter);
+app.use(documentRouter);
 
 const DB  = "mongodb+srv://jainpuneet711:Apply9416@cluster0.iyzjjy2.mongodb.net/?retryWrites=true&w=majority";
 

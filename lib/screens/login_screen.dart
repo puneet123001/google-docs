@@ -4,6 +4,7 @@ import 'package:google_docs_clone/colors.dart';
 import 'package:google_docs_clone/repository/auth_repository.dart';
 import 'package:google_docs_clone/screens/home_screen.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:routemaster/routemaster.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
@@ -19,6 +20,7 @@ class LoginScreen extends ConsumerWidget {
       ));
     } else {
       ref.read(userProvider.notifier).update((state) => errorModel.data);
+      print('hi');
       navigator
           .push(MaterialPageRoute(builder: (context) => const HomeScreen()));
     }
