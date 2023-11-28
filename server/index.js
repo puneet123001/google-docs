@@ -4,6 +4,8 @@ const cors = require("cors");
 const http = require("http");
 const authRouter = require("./routes/auth");
 const documentRouter = require("./routes/document");
+const Document = require("./models/document");
+
 
 const PORT = process.env.PORT | 3001;
 
